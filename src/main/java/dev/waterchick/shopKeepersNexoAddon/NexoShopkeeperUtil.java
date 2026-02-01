@@ -72,7 +72,7 @@ public final class NexoShopkeeperUtil {
             ItemStack updated = getUpdatedNexoItem(item);
             if (updated != null && !updated.isSimilar(item)) {
                 String nexoId = NexoItems.idFromItem(item);
-                logger.info("Updating Nexo item '" + nexoId + "' in shopkeeper");
+                logger.fine("Updating Nexo item '" + nexoId + "' in shopkeeper");
                 newOffers.add(PriceOffer.create(updated, offer.getPrice()));
                 changed = true;
             } else {
@@ -119,7 +119,7 @@ public final class NexoShopkeeperUtil {
 
             if (offerChanged) {
                 String ids = formatNexoIds(result, item1, item2);
-                logger.info("Updating Nexo trade offer [" + ids + "] in shopkeeper");
+                logger.fine("Updating Nexo trade offer [" + ids + "] in shopkeeper");
                 newOffers.add(TradeOffer.create(result, item1, item2));
                 changed = true;
             } else {
