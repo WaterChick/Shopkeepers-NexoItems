@@ -1,5 +1,5 @@
 name: ShopKeepers-NexoAddon
-version: '1.0.0'
+version: '1.0.1'
 main: dev.waterchick.shopKeepersNexoAddon.ShopKeepersNexoAddon
 api-version: '1.20'
 depend: [Shopkeepers, Nexo]

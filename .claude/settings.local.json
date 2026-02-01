@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:repo.nexomc.com)",
+      "Bash(javap:*)",
+      "Bash(unzip:*)",
+      "Bash(jar tf:*)",
+      "Bash(./gradlew build:*)",
+      "Bash(gh api:*)",
+      "Bash(gh.exe api:*)",
+      "Bash(git remote add:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial implementation of ShopKeepers-NexoAddon\n\nBridge plugin that synchronizes Nexo custom items with Shopkeepers offers.\nListens to NexoItemsLoadedEvent to update all shopkeeper offers with current\nNexo item definitions, and monitors trades as a safety net for outdated items.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix workflow to trigger on release creation\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(tree:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
