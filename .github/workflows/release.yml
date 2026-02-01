@@ -1,9 +1,8 @@
-name: Build & Release
+name: Build & Upload JAR
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [created]
 
 permissions:
   contents: write
@@ -28,14 +27,8 @@ jobs:
       - name: Build
         run: ./gradlew build
 
-      - name: Extract version from tag
-        id: version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> "$GITHUB_OUTPUT"
-
-      - name: Create Release
+      - name: Upload JAR to Release
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.RELEASE_TOKEN }}
-          name: ShopKeepers-NexoAddon v${{ steps.version.outputs.VERSION }}
           files: build/libs/ShopKeepers-NexoAddon-*.jar
-          generate_release_notes: true
