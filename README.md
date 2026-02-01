@@ -32,8 +32,8 @@ Book shops are not affected (they trade by book title, not by item).
 
 ## Installation
 
-1. Build the plugin with `./gradlew build`
-2. Copy the JAR from `build/libs/` to your server's `plugins/` folder
+1. Download the latest JAR from the [Releases](https://github.com/WaterChick/Shopkeepers-NexoItems/releases) tab
+2. Copy the JAR to your server's `plugins/` folder
 3. Make sure both Shopkeepers and Nexo are installed
 4. Start/restart the server
 
